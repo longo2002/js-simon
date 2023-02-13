@@ -1,5 +1,7 @@
 console.log("works!")
 
+let punteggioNums = document.getElementById("punteggio-numero")
+let punteggioGroup = document.getElementById("punteggio-elenco")
 let btnEl = document.getElementById("btn")
 const nums = []
 const rightNums = []
@@ -25,11 +27,17 @@ function userNumsGatherer() {
     }
 }
 
+function print(){
+    punteggioGroup.innerHTML = rightNums
+    punteggioNums.innerHTML = rightNums.length 
+}
+
 btnEl.addEventListener("click",
     function runEl() {
         numsGenerator()
         alert(nums)
-        setTimeout(userNumsGatherer, 3000) 
+        setTimeout(userNumsGatherer, 30000)
+        setTimeout(print, 45000) 
     }
 )
 
