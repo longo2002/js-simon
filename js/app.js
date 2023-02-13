@@ -12,6 +12,9 @@ function numsGenerator() {
         const randomNumber = Math
             .floor(Math.random() * 100) + 1
         nums.push(randomNumber);
+        if (!nums.includes(randomNumber)) {
+            nums.push(randomNumber);
+        }
     } while (nums.length < 5);
 }
 
